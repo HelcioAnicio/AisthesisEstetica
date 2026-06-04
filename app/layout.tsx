@@ -1,16 +1,18 @@
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Montserrat } from 'next/font/google';
+import './globals.css';
 
-// const poppins = Poppins({
-//   subsets: ["latin"],
-//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-// });
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-mont',
+});
 
 export const metadata: Metadata = {
-  title: "Aisthésis - Clínica Estética & Pilates",
+  title: 'Aisthésis - Clínica Estética & Pilates',
   description:
-    "Um refúgio de tranquilidade onde a ciência estética encontra o cuidado humano para revelar sua melhor versão.",
+    'Um refúgio de tranquilidade onde a ciência estética encontra o cuidado humano para revelar sua melhor versão.',
 };
 
 export default function RootLayout({
@@ -19,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body className='font=[Montserrat]'>{children}</body>
+    <html lang='pt-BR'>
+      <body className={`${montserrat.variable} antialiased`}>{children}</body>
     </html>
   );
 }
