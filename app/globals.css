@@ -1,26 +1,245 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ── Colors ── */
+  --color-primary: #0f1f3d;
+  --color-primary-container: #0f1f3d;
+  --color-secondary: #00b4c8;
+  --color-secondary-container: #00b4c8;
+  --color-secondary-fixed-dim: #4dd8ec;
+  --color-med-blue: #3b6fd4;
+  --color-white: #ffffff;
+  --color-surface: #f9f9f9;
+  --color-surface-bright: #f9f9f9;
+  --color-surface-container: #eeeeee;
+  --color-surface-container-high: #e8e8e8;
+  --color-surface-container-highest: #e2e2e2;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-dim: #dadada;
+  --color-surface-variant: #e2e2e2;
+  --color-surface-lavender: #f4f3ff;
+  --color-surface-tint: #505e80;
+  --color-background: #f9f9f9;
+  --color-on-surface: #1a1c1c;
+  --color-on-background: #1a1c1c;
+  --color-on-surface-variant: #45474e;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #a0aec0;
+  --color-on-primary-fixed: #0a1b39;
+  --color-on-secondary: #ffffff;
+  --color-on-tertiary-container: #867adc;
+  --color-outline: #75777e;
+  --color-outline-variant: #c5c6ce;
+  --color-inverse-primary: #b7c6ed;
+  --color-inverse-surface: #2f3131;
+  --color-inverse-on-surface: #f1f1f1;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+
+  /* ── Spacing ── */
+  --spacing-gutter: 24px;
+  --spacing-unit: 8px;
+  --spacing-stack-md: 48px;
+  --spacing-stack-lg: 96px;
+  --spacing-container-max: 1280px;
+  --spacing-margin-desktop: 64px;
+  --spacing-margin-mobile: 20px;
+
+  /* ── Font Families ── */
+  --font-playfair: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-manrope: var(--font-manrope), 'Manrope', system-ui, sans-serif;
+
+  /* ── Border Radius ── */
+  --radius-DEFAULT: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  --default-transition-duration: 200ms;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ── Base ── */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), 'Manrope', system-ui, sans-serif;
+  color: var(--color-on-surface);
+  background-color: var(--color-background);
+}
+
+/* ── Material Symbols ── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+.fill-icon {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ── Curso banner ── */
+.course-banner {
+  background: #0f1f3d;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+}
+
+/* ── Reveal animation ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Word stagger ── */
+.word-stagger {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* ── Nav scrolled ── */
+.nav-scrolled {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px -8px rgba(15, 31, 61, 0.12);
+}
+
+/* ── Hero ── */
+.hero-section {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #fff;
+}
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  left: 42%;
+  background: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1400&q=90&fit=crop&crop=right')
+    center / cover no-repeat;
+  z-index: 0;
+}
+.hero-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #ffffff 15%,
+    rgba(255, 255, 255, 0.9) 35%,
+    rgba(255, 255, 255, 0.4) 60%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  z-index: 1;
+}
+.hero-photo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, transparent 100%);
+  z-index: 1;
+}
+
+/* ── Sobre: imagens grid ── */
+.sobre-img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* ── Tratamentos ── */
+.trat-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid #f0f0f0;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.trat-card:hover {
+  box-shadow: 0 12px 40px rgba(15, 31, 61, 0.12);
+  transform: translateY(-4px);
+}
+
+/* ── Tabs ── */
+.tab-active {
+  background: #00b4c8;
+  color: #fff;
+}
+.tab-inactive {
+  color: #45474e;
+}
+.tab-inactive:hover {
+  background: #f3f3f3;
+}
+
+/* ── Curso section ── */
+.curso-section {
+  background: #0d1a33;
+}
+
+/* ── Pilates section ── */
+.pilates-section {
+  background: #0f1f3d;
+}
+
+/* ── Profissionais ── */
+.prof-card {
+  transition: transform 0.3s;
+}
+.prof-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ── Testimonial cards ── */
+.dep-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px 28px;
+  box-shadow: 0 2px 16px rgba(15, 31, 61, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* ── Scrollbar ── */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ── CTA pulse ── */
+@keyframes pulse-btn {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+.animate-pulse-load {
+  animation: pulse-btn 2.2s ease-in-out infinite;
+  animation-delay: 2s;
 }
