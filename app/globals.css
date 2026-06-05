@@ -44,7 +44,7 @@
   --spacing-stack-md: 48px;
   --spacing-stack-lg: 96px;
   --spacing-container-max: 1280px;
-  --spacing-margin-desktop: 64px;
+  --spacing-margin-desktop: 12px;
   --spacing-margin-mobile: 20px;
 
   /* ── Font Families ── */
@@ -184,7 +184,7 @@ body {
 .sobre-img-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 26px;
 }
 
 /* ── Tratamentos ── */

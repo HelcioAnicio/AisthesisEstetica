@@ -12,13 +12,16 @@ const playfair = Playfair_Display({
 const manrope = Manrope({
   variable: '--font-manrope',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['200', '300', '400', '500', '600', '700', '800'],
 });
 
 export const metadata: Metadata = {
   title: 'Aisthésis — Clínica de Estética & Pilates',
   description:
     'Centro especializado em estética facial, corporal e pilates. Tratamentos personalizados com tecnologia de ponta. Agende sua visita.',
+  icons: {
+    icon: '/aisthesis.png',
+  },
 };
 
 export default function RootLayout({

@@ -2,6 +2,25 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AnimationProvider from './components/AnimationProvider';
 import { WA, PHONE_DISPLAY } from './lib/links';
+import {
+  MdBiotech,
+  MdCall,
+  MdGroups,
+  MdHealing,
+  MdPregnantWoman,
+  MdSelfImprovement,
+  MdVerifiedUser,
+} from 'react-icons/md';
+import {
+  IoArrowForwardCircle,
+  IoFitnessSharp,
+  IoSchool,
+  IoSparkles,
+} from 'react-icons/io5';
+import { FaCheckCircle, FaInstagram } from 'react-icons/fa';
+import { BsChatRightText } from 'react-icons/bs';
+import { FaLocationDot, FaWhatsapp } from 'react-icons/fa6';
+import { RiCalendarScheduleLine } from 'react-icons/ri';
 
 export default function Home() {
   return (
@@ -20,7 +39,7 @@ export default function Home() {
                 alt='Aisthésis'
                 width={120}
                 height={38}
-                className='object-contain w-20'
+                className='object-contain w-12 md:w-20 '
               />
             </div>
             <div className='hidden md:flex items-center gap-8'>
@@ -43,7 +62,7 @@ export default function Home() {
             <Link
               href={WA.agendar}
               target='_blank'
-              className='bg-primary text-white px-6 py-2.5 rounded-full text-[12px] font-bold tracking-wider uppercase hover:bg-secondary transition-colors'>
+              className='bg-primary text-white px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold tracking-wider uppercase hover:bg-secondary transition-colors'>
               Agendar
             </Link>
           </div>
@@ -51,17 +70,17 @@ export default function Home() {
       </header>
 
       {/* ── HERO ── */}
-      <section className='hero-section pt-[116px]'>
+      <section className='hero-section pt-29 pb-10'>
         <div className='hero-photo' />
 
-        <div className='relative z-10 max-w-container-max mx-auto px-margin-desktop w-full'>
+        <div className='relative z-10 px-4 max-w-container-max mx-auto  w-full'>
           <div className='max-w-[560px]'>
-            <div className='inline-flex items-center gap-2 bg-secondary/10 border border-secondary/20 text-primary px-4 py-2 rounded-full text-[11px] font-bold tracking-widest uppercase mb-8'>
+            <div className='inline-flex w-52 items-center gap-2 bg-secondary/10 border border-secondary/20 text-primary px-4 py-2 rounded-full text-[11px] font-bold tracking-widest uppercase mb-8'>
               <span className='w-1.5 h-1.5 rounded-full bg-secondary inline-block' />
               Clínica de Estética & Pilates · Caxias do Sul
             </div>
 
-            <h1 className='font-playfair text-[52px] leading-[60px] font-semibold text-primary mb-6'>
+            <h1 className='font-playfair text-3xl sm:text-4xl lg:text-6xl lg:leading-15 font-semibold text-primary mb-6'>
               <span className='word-stagger'>Realce</span>{' '}
               <span className='word-stagger'>sua</span>{' '}
               <span className='word-stagger italic text-secondary'>
@@ -74,7 +93,7 @@ export default function Home() {
               <span className='word-stagger'>cuida.</span>
             </h1>
 
-            <p className='text-[15px] text-on-surface-variant leading-relaxed max-w-[420px] mb-10 reveal'>
+            <p className='text-sm sm:text-base text-on-surface-variant font-light leading-relaxed max-w-105 mb-10 reveal'>
               Um refúgio de tranquilidade onde a ciência estética encontra o
               cuidado humano — para revelar sua melhor versão.
             </p>
@@ -83,27 +102,27 @@ export default function Home() {
               <Link
                 href={WA.agendar}
                 target='_blank'
-                className='bg-secondary text-white px-8 py-3.5 rounded-full text-[13px] font-bold tracking-wider uppercase hover:shadow-xl hover:scale-[1.02] transition-all'>
+                className='bg-secondary text-white px-6 py-3.5 rounded-full text-xs font-bold tracking-wider uppercase hover:shadow-xl hover:scale-[1.02] transition-all'>
                 Agendar consulta
               </Link>
               <Link
                 href='/curso-limpeza-de-pele'
-                className='border-2 border-primary/20 text-primary px-8 py-3.5 rounded-full text-[13px] font-bold tracking-wider uppercase hover:border-secondary hover:text-secondary transition-all duration-300'>
+                className='border-2 border-primary/20 text-primary px-5 py-3.5 rounded-full text-xs font-bold tracking-wider uppercase hover:border-secondary hover:text-secondary transition-all duration-300'>
                 Curso de Limpeza de Pele
               </Link>
             </div>
 
-            <div className='flex gap-10 mt-14 reveal'>
+            <div className='flex flex-wrap gap-10 mt-14 reveal'>
               {[
                 ['12+', 'Anos de experiência'],
                 ['+500', 'Pacientes atendidas'],
                 ['4.9★', 'Avaliação Google'],
               ].map(([num, label]) => (
                 <div key={label}>
-                  <p className='text-[26px] font-bold text-primary leading-none mb-1'>
+                  <p className='text-2xl font-bold text-primary leading-none mb-1'>
                     {num}
                   </p>
-                  <p className='text-[11px] text-on-surface-variant uppercase tracking-wider font-semibold'>
+                  <p className='text-xs font-light text-on-surface-variant uppercase tracking-wider '>
                     {label}
                   </p>
                 </div>
@@ -117,7 +136,7 @@ export default function Home() {
       <section
         id='sobre'
         className='py-stack-lg bg-white overflow-hidden'>
-        <div className='max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center'>
+        <div className='max-w-container-max mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center'>
           <div className='sobre-img-grid reveal'>
             <Image
               width={400}
@@ -145,7 +164,7 @@ export default function Home() {
               height={300}
               src='https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80&fit=crop'
               alt='Consulta estética'
-              className='w-full h-[240px] object-cover rounded-2xl -mt-12 relative z-10'
+              className='w-full h-[240px] object-cover rounded-2xl -mt-10 relative z-10'
             />
           </div>
 
@@ -164,22 +183,22 @@ export default function Home() {
             <div className='space-y-6 mb-10'>
               {[
                 {
-                  icon: 'verified_user',
+                  icon: <MdVerifiedUser />,
                   title: '12+ anos de história',
                   desc: 'Experiência comprovada em resultados reais.',
                 },
                 {
-                  icon: 'spa',
+                  icon: <IoSparkles />,
                   title: 'Ambiente aconchegante',
                   desc: 'Cada detalhe pensado para o seu bem-estar.',
                 },
                 {
-                  icon: 'science',
+                  icon: <MdBiotech />,
                   title: 'Tecnologia de ponta',
                   desc: 'Equipamentos e protocolos sempre atualizados.',
                 },
                 {
-                  icon: 'groups',
+                  icon: <MdGroups />,
                   title: 'Equipe especializada',
                   desc: 'Profissionais em constante atualização técnica.',
                 },
@@ -206,11 +225,9 @@ export default function Home() {
             <Link
               href={WA.contato}
               target='_blank'
-              className='inline-flex items-center gap-2 bg-primary text-white px-7 py-3 rounded-full text-[13px] font-bold tracking-wider uppercase hover:bg-secondary transition-colors'>
+              className='inline-flex items-center gap-2 bg-primary text-white px-7 py-3 rounded-full text-xs font-bold tracking-wider uppercase hover:bg-secondary transition-colors'>
               Fale conosco
-              <span className='material-symbols-outlined text-[16px]'>
-                arrow_forward
-              </span>
+              <IoArrowForwardCircle className='material-symbols-outlined ' />
             </Link>
           </div>
         </div>
@@ -220,7 +237,7 @@ export default function Home() {
       <section
         id='tratamentos'
         className='py-stack-lg bg-surface'>
-        <div className='max-w-container-max mx-auto px-margin-desktop'>
+        <div className='max-w-container-max mx-auto px-4'>
           <div className='flex flex-col md:flex-row justify-between items-end mb-14 gap-6 reveal'>
             <div>
               <span className='text-[11px] font-bold tracking-widest uppercase text-secondary block mb-3'>
@@ -308,9 +325,7 @@ export default function Home() {
                   target='_blank'
                   className='text-secondary text-[12px] font-bold tracking-wide inline-flex items-center gap-1.5 group-hover:gap-3 transition-all'>
                   Agendar{' '}
-                  <span className='material-symbols-outlined text-[16px]'>
-                    arrow_forward
-                  </span>
+                  <IoArrowForwardCircle className='material-symbols-outlined ' />
                 </Link>
               </div>
             ))}
@@ -374,9 +389,7 @@ export default function Home() {
                   target='_blank'
                   className='text-secondary text-[12px] font-bold tracking-wide inline-flex items-center gap-1.5 group-hover:gap-3 transition-all'>
                   Agendar{' '}
-                  <span className='material-symbols-outlined text-[16px]'>
-                    arrow_forward
-                  </span>
+                  <IoArrowForwardCircle className='material-symbols-outlined ' />
                 </Link>
               </div>
             ))}
@@ -388,12 +401,10 @@ export default function Home() {
       <section
         id='curso'
         className='py-stack-lg curso-section overflow-hidden'>
-        <div className='max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center'>
+        <div className='max-w-container-max mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center'>
           <div className='reveal'>
             <div className='inline-flex items-center gap-2 bg-secondary/20 text-secondary px-4 py-2 rounded-full text-[11px] font-bold tracking-widest uppercase mb-6'>
-              <span className='material-symbols-outlined text-[16px]'>
-                school
-              </span>
+              <IoSchool className='material-symbols-outlined ' />
               Curso Presencial · Caxias do Sul
             </div>
             <h2 className='font-playfair text-[40px] leading-[48px] font-semibold text-white mb-6'>
@@ -417,9 +428,7 @@ export default function Home() {
                 <li
                   key={item}
                   className='flex items-center gap-3 text-[14px] text-on-primary-container'>
-                  <span className='material-symbols-outlined text-secondary text-[18px]'>
-                    check_circle
-                  </span>
+                  <FaCheckCircle className='material-symbols-outlined text-secondary text-lg' />{' '}
                   {item}
                 </li>
               ))}
@@ -429,9 +438,7 @@ export default function Home() {
                 href='/curso-limpeza-de-pele'
                 className='inline-flex items-center gap-2 bg-secondary text-white px-8 py-4 rounded-full text-[13px] font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-[1.02] transition-all'>
                 Ver detalhes do curso
-                <span className='material-symbols-outlined text-[18px]'>
-                  arrow_forward
-                </span>
+                <IoArrowForwardCircle className='material-symbols-outlined text-lg' />
               </Link>
               <Link
                 href={WA.curso}
@@ -474,7 +481,7 @@ export default function Home() {
       <section
         id='pilates'
         className='pilates-section py-stack-lg overflow-hidden'>
-        <div className='max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-20 items-center'>
+        <div className='max-w-container-max mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-20 items-center'>
           <div className='relative reveal order-2 md:order-1'>
             <div className='rounded-2xl overflow-hidden shadow-2xl'>
               <Image
@@ -482,7 +489,7 @@ export default function Home() {
                 height={500}
                 src='https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&q=80&fit=crop'
                 alt='Estúdio de Pilates Aisthésis'
-                className='w-full h-[500px] object-cover'
+                className='w-full h-[500px] object-cover hover:scale-105 transition-transform duration-300'
               />
             </div>
             <div className='absolute -bottom-8 -right-6 bg-white rounded-2xl px-7 py-5 shadow-2xl border border-surface-container-highest'>
@@ -507,16 +514,16 @@ export default function Home() {
               controle corporal. Turmas pequenas e acompanhamento
               individualizado para a sua evolução real.
             </p>
-            <div className='grid grid-cols-2 gap-5 mb-10'>
+            <div className='grid grid-cols-1 min-[400px]:grid-cols-2 gap-5 mb-10'>
               {[
-                { icon: 'self_improvement', text: 'Pilates Solo' },
-                { icon: 'fitness_center', text: 'Aparelhos' },
-                { icon: 'pregnant_woman', text: 'Gestantes' },
-                { icon: 'healing', text: 'Reabilitação' },
+                { icon: <MdSelfImprovement />, text: 'Pilates Solo' },
+                { icon: <IoFitnessSharp />, text: 'Aparelhos' },
+                { icon: <MdPregnantWoman />, text: 'Gestantes' },
+                { icon: <MdHealing />, text: 'Reabilitação' },
               ].map(({ icon, text }) => (
                 <div
                   key={text}
-                  className='flex items-center gap-3 bg-white/10 rounded-xl px-4 py-3'>
+                  className='flex items-center min-w-1/2 gap-3 bg-white/10 rounded-xl px-4 py-3'>
                   <span className='material-symbols-outlined text-secondary text-[20px]'>
                     {icon}
                   </span>
@@ -531,9 +538,7 @@ export default function Home() {
               target='_blank'
               className='inline-flex items-center gap-2 border-2 border-secondary text-secondary px-8 py-3.5 rounded-full text-[13px] font-bold tracking-wider uppercase hover:bg-secondary hover:text-white transition-all'>
               Conhecer o estúdio
-              <span className='material-symbols-outlined text-[16px]'>
-                arrow_forward
-              </span>
+              <IoArrowForwardCircle className='material-symbols-outlined ' />
             </Link>
           </div>
         </div>
@@ -557,29 +562,30 @@ export default function Home() {
             </p>
           </div>
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto  gap-8'>
             {[
               {
                 img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&q=80&fit=crop&crop=face',
-                name: 'Profissional',
-                role: 'Estética Facial & Corporal',
-                cro: 'CREFITO-2 · XXXXXX',
+                name: 'DANIELLA DEMOSSI BASSANI',
+                role: [
+                  'Fisioterapeuta Graduada',
+                  'Pós em Fisioterapia Dermatofuncional',
+                  'Fisioterapia Neurofuncional',
+                ],
+                cro: 'Certificado - xxxxx',
               },
               {
                 img: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=500&q=80&fit=crop&crop=face',
-                name: 'Profissional',
-                role: 'Instrutora de Pilates',
-                cro: 'CREF · XXXXXX',
+                name: 'ROBERTA VEBER TOSCAN',
+                role: [
+                  'Fisioterapeuta Graduada',
+                  'Pós em Fisioterapia Dermatofuncional',
+                ],
+                cro: 'Certificado - xxxxx,',
               },
-              {
-                img: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=500&q=80&fit=crop&crop=face',
-                name: 'Profissional',
-                role: 'Biomédica Esteta',
-                cro: 'CRBio · XXXXXX',
-              },
-            ].map(({ img, name, role, cro }) => (
+            ].map(({ img, name, role, cro }, index) => (
               <div
-                key={role}
+                key={index}
                 className='prof-card reveal group'>
                 <div className='overflow-hidden rounded-2xl mb-5'>
                   <Image
@@ -587,14 +593,20 @@ export default function Home() {
                     height={400}
                     src={img}
                     alt={name}
-                    className='w-full h-[300px] object-cover object-top group-hover:scale-105 transition-transform duration-700'
+                    className='w-full h-75 object-cover object-top group-hover:scale-105 transition-transform duration-700'
                   />
                 </div>
                 <h3 className='font-playfair text-[20px] font-semibold text-primary mb-1'>
                   {name}
                 </h3>
-                <p className='text-[13px] text-secondary font-semibold mb-1'>
-                  {role}
+                <p className='text-xs text-secondary font-semibold mb-1'>
+                  {role.map((graduation: string, index: number) => (
+                    <p
+                      className='block'
+                      key={index}>
+                      {graduation}
+                    </p>
+                  ))}
                 </p>
                 <p className='text-[12px] text-on-surface-variant'>{cro}</p>
               </div>
@@ -717,7 +729,7 @@ export default function Home() {
                 alt='Aisthésis'
                 width={140}
                 height={44}
-                className='object-contain mb-5'
+                className='w-24 mb-5'
               />
               <p className='text-[14px] text-on-surface-variant leading-relaxed max-w-[280px] mb-8'>
                 Excelência em estética e pilates. Transformando vidas através do
@@ -728,17 +740,13 @@ export default function Home() {
                   href='https://www.instagram.com/aisthesisestetica'
                   target='_blank'
                   className='w-9 h-9 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-secondary hover:text-white hover:border-secondary transition-all'>
-                  <span className='material-symbols-outlined text-[16px]'>
-                    camera
-                  </span>
+                  <FaInstagram className='material-symbols-outlined w-5' />
                 </Link>
                 <Link
                   href={WA.contato}
                   target='_blank'
                   className='w-9 h-9 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-secondary hover:text-white hover:border-secondary transition-all'>
-                  <span className='material-symbols-outlined text-[16px]'>
-                    chat
-                  </span>
+                  <BsChatRightText className='material-symbols-outlined w-5' />
                 </Link>
               </div>
             </div>
@@ -772,17 +780,13 @@ export default function Home() {
               </h4>
               <ul className='space-y-5'>
                 <li className='flex items-start gap-3'>
-                  <span className='material-symbols-outlined text-secondary text-[20px] mt-0.5'>
-                    location_on
-                  </span>
-                  <span className='text-[14px] text-on-surface-variant leading-relaxed'>
+                  <FaLocationDot className='material-symbols-outlined text-secondary text-[20px] mt-0.5' />
+                  <span className=' text-on-surface-variant leading-relaxed'>
                     Caxias do Sul — RS
                   </span>
                 </li>
                 <li className='flex items-center gap-3'>
-                  <span className='material-symbols-outlined text-secondary text-[20px]'>
-                    call
-                  </span>
+                  <MdCall className='material-symbols-outlined text-secondary ' />
                   <Link
                     href={`tel:${PHONE_DISPLAY.replace(/\D/g, '')}`}
                     className='text-[14px] text-on-surface-variant hover:text-secondary transition-colors'>
@@ -790,9 +794,7 @@ export default function Home() {
                   </Link>
                 </li>
                 <li className='flex items-center gap-3'>
-                  <span className='material-symbols-outlined text-secondary text-[20px]'>
-                    schedule
-                  </span>
+                  <RiCalendarScheduleLine className='material-symbols-outlined text-secondary ' />
                   <span className='text-[14px] text-on-surface-variant'>
                     Seg – Sex: 08:00 – 20:00
                   </span>
@@ -802,9 +804,7 @@ export default function Home() {
                     href={WA.contato}
                     target='_blank'
                     className='inline-flex items-center gap-2 bg-secondary text-white px-6 py-2.5 rounded-full text-[12px] font-bold tracking-wider hover:opacity-90 transition-opacity'>
-                    <span className='material-symbols-outlined text-[16px]'>
-                      chat
-                    </span>
+                    <FaWhatsapp className='material-symbols-outlined text-[16px]' />
                     Falar no WhatsApp
                   </Link>
                 </li>
@@ -837,13 +837,8 @@ export default function Home() {
       <Link
         href={WA.contato}
         target='_blank'
-        className='fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform'>
-        <svg
-          viewBox='0 0 24 24'
-          fill='white'
-          className='w-7 h-7'>
-          <path d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z' />
-        </svg>
+        className='fixed bottom-6 right-6 z-50 w-16 h-16 p-1 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform'>
+        <FaWhatsapp className='w-10 h-10' />
       </Link>
     </>
   );
