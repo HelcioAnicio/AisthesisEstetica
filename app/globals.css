@@ -147,8 +147,7 @@ body {
   position: absolute;
   inset: 0;
   left: 42%;
-  background: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1400&q=90&fit=crop&crop=right')
-    center / cover no-repeat;
+  background: url('./background.jpg') center / cover no-repeat;
   z-index: 0;
 }
 .hero-photo::before {

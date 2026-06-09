@@ -30,16 +30,16 @@ export default function Home() {
       {/* ── NAV ── */}
       <header>
         <nav
-          className='fixed w-full z-50 transition-all duration-500 h-18 flex items-center bg-white backdrop-blur-xs'
+          className='fixed w-full z-50 transition-all duration-500 h-max py-2 flex items-center bg-white backdrop-blur-xs'
           id='top-nav'>
           <div className='flex justify-between items-center w-full max-w-6xl mx-auto px-4'>
-            <div className='flex items-center h- gap-3'>
+            <div className='flex items-center gap-3'>
               <Image
                 src='/aisthesis.png'
                 alt='Aisthésis'
                 width={120}
                 height={38}
-                className='object-contain w-12 md:w-20 '
+                className='object-contain w-12 md:w-20'
               />
             </div>
             <div className='hidden md:flex items-center gap-8'>
@@ -54,7 +54,7 @@ export default function Home() {
                 <Link
                   key={label}
                   href={href}
-                  className='text-[12px] font-semibold text-on-surface-variant hover:text-primary transition-colors tracking-wider uppercase'>
+                  className='text-xs font-semibold text-on-surface-variant hover:text-primary transition-colors tracking-wider uppercase'>
                   {label}
                 </Link>
               ))}
@@ -70,17 +70,19 @@ export default function Home() {
       </header>
 
       {/* ── HERO ── */}
-      <section className='hero-section pt-29 pb-10'>
+      <section className='hero-section pt-16 sm:pt-20 pb-10'>
         <div className='hero-photo' />
 
-        <div className='relative z-10 px-4 max-w-container-max mx-auto  w-full'>
+        <div className='relative z-10 px-4 max-w-container-max mx-auto w-full'>
           <div className='max-w-[560px]'>
-            <div className='inline-flex w-52 items-center gap-2 bg-secondary/10 border border-secondary/20 text-primary px-4 py-2 rounded-full text-[11px] font-bold tracking-widest uppercase mb-8'>
+            {/* Eyebrow label */}
+            <div className='inline-flex w-52 items-center gap-2 bg-secondary/10 border border-secondary/20 text-primary px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase mb-8'>
               <span className='w-1.5 h-1.5 rounded-full bg-secondary inline-block' />
               Clínica de Estética & Pilates · Caxias do Sul
             </div>
 
-            <h1 className='font-playfair text-3xl sm:text-4xl lg:text-6xl lg:leading-15 font-semibold text-primary mb-6'>
+            {/* H1 */}
+            <h1 className='font-playfair text-4xl sm:text-5xl lg:text-6xl lg:leading-tight font-semibold text-primary mb-6'>
               <span className='word-stagger'>Realce</span>{' '}
               <span className='word-stagger'>sua</span>{' '}
               <span className='word-stagger italic text-secondary'>
@@ -93,25 +95,28 @@ export default function Home() {
               <span className='word-stagger'>cuida.</span>
             </h1>
 
-            <p className='text-sm sm:text-base text-on-surface-variant font-light leading-relaxed max-w-105 mb-10 reveal'>
+            {/* Body */}
+            <p className='text-sm sm:text-base text-on-surface-variant font-light leading-relaxed max-w-md mb-10 reveal'>
               Um refúgio de tranquilidade onde a ciência estética encontra o
               cuidado humano — para revelar sua melhor versão.
             </p>
 
+            {/* CTAs */}
             <div className='flex flex-wrap gap-4 reveal'>
               <Link
                 href={WA.agendar}
                 target='_blank'
-                className='bg-secondary text-white px-6 py-3.5 rounded-full text-xs font-bold tracking-wider uppercase hover:shadow-xl hover:scale-[1.02] transition-all'>
+                className='bg-secondary text-white px-6 py-3.5 rounded-full text-xs sm:text-sm font-bold tracking-wider uppercase hover:shadow-xl hover:scale-[1.02] transition-all'>
                 Agendar consulta
               </Link>
               <Link
                 href='/curso-limpeza-de-pele'
-                className='border-2 border-primary/20 text-primary px-5 py-3.5 rounded-full text-xs font-bold tracking-wider uppercase hover:border-secondary hover:text-secondary transition-all duration-300'>
+                className='border-2 border-primary/20 text-primary px-5 py-3.5 rounded-full text-xs sm:text-sm font-bold tracking-wider uppercase hover:border-secondary hover:text-secondary transition-all duration-300'>
                 Curso de Limpeza de Pele
               </Link>
             </div>
 
+            {/* Stats */}
             <div className='flex flex-wrap gap-10 mt-14 reveal'>
               {[
                 ['12+', 'Anos de experiência'],
@@ -119,10 +124,10 @@ export default function Home() {
                 ['4.9★', 'Avaliação Google'],
               ].map(([num, label]) => (
                 <div key={label}>
-                  <p className='text-2xl font-bold text-primary leading-none mb-1'>
+                  <p className='text-2xl sm:text-3xl font-bold text-primary leading-none mb-1'>
                     {num}
                   </p>
-                  <p className='text-xs font-light text-on-surface-variant uppercase tracking-wider '>
+                  <p className='text-xs text-on-surface-variant font-light uppercase tracking-wider'>
                     {label}
                   </p>
                 </div>
@@ -140,16 +145,16 @@ export default function Home() {
           <div className='sobre-img-grid reveal'>
             <Image
               width={400}
-              height={300}
-              src='https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80&fit=crop'
-              alt='Clínica Aisthésis'
+              height={200}
+              src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80&fit=crop'
+              alt='Tratamento facial'
               className='w-full h-[240px] object-cover rounded-2xl'
             />
             <Image
               width={400}
-              height={200}
-              src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80&fit=crop'
-              alt='Tratamento facial'
+              height={300}
+              src='https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80&fit=crop'
+              alt='Clínica Aisthésis'
               className='w-full h-[185px] object-cover rounded-2xl mt-6'
             />
             <Image
@@ -162,20 +167,23 @@ export default function Home() {
             <Image
               width={400}
               height={300}
-              src='https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80&fit=crop'
+              src='/proveValue.jpg'
               alt='Consulta estética'
               className='w-full h-[240px] object-cover rounded-2xl -mt-10 relative z-10'
             />
           </div>
 
           <div className='reveal'>
-            <span className='text-[11px] font-bold tracking-widest uppercase text-secondary block mb-4'>
+            {/* Eyebrow */}
+            <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-4'>
               Sobre Nós
             </span>
-            <h2 className='font-playfair text-[36px] leading-[44px] font-semibold text-primary mb-6'>
+            {/* H2 */}
+            <h2 className='font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary mb-6'>
               Conheça a Aisthésis
             </h2>
-            <p className='text-[15px] text-on-surface-variant leading-relaxed mb-8'>
+            {/* Body */}
+            <p className='text-sm sm:text-base text-on-surface-variant leading-relaxed mb-8'>
               Nossa trajetória é marcada pela busca incessante do equilíbrio
               entre saúde e estética. Unimos tecnologia de ponta a um ambiente
               planejado para o seu total conforto e bem-estar.
@@ -207,15 +215,15 @@ export default function Home() {
                   key={title}
                   className='flex items-center gap-4 group'>
                   <div className='w-11 h-11 bg-surface-lavender rounded-xl flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors flex-shrink-0'>
-                    <span className='material-symbols-outlined text-[20px]'>
-                      {icon}
-                    </span>
+                    <span className='text-xl'>{icon}</span>
                   </div>
                   <div>
-                    <p className='text-[13px] font-bold text-primary'>
+                    {/* Mini title */}
+                    <p className='text-xs sm:text-sm font-bold text-primary'>
                       {title}
                     </p>
-                    <p className='text-[13px] text-on-surface-variant'>
+                    {/* Mini desc */}
+                    <p className='text-xs sm:text-sm text-on-surface-variant'>
                       {desc}
                     </p>
                   </div>
@@ -225,9 +233,9 @@ export default function Home() {
             <Link
               href={WA.contato}
               target='_blank'
-              className='inline-flex items-center gap-2 bg-primary text-white px-7 py-3 rounded-full text-xs font-bold tracking-wider uppercase hover:bg-secondary transition-colors'>
+              className='inline-flex items-center gap-2 bg-primary text-white px-7 py-3 rounded-full text-xs sm:text-sm font-bold tracking-wider uppercase hover:bg-secondary transition-colors'>
               Fale conosco
-              <IoArrowForwardCircle className='material-symbols-outlined ' />
+              <IoArrowForwardCircle />
             </Link>
           </div>
         </div>
@@ -240,22 +248,24 @@ export default function Home() {
         <div className='max-w-container-max mx-auto px-4'>
           <div className='flex flex-col md:flex-row justify-between items-end mb-14 gap-6 reveal'>
             <div>
-              <span className='text-[11px] font-bold tracking-widest uppercase text-secondary block mb-3'>
+              {/* Eyebrow */}
+              <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-3'>
                 Serviços
               </span>
-              <h2 className='font-playfair text-[36px] leading-[44px] font-semibold text-primary'>
+              {/* H2 */}
+              <h2 className='font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary'>
                 Nossos Tratamentos
               </h2>
             </div>
             <div className='flex gap-0 border border-outline-variant rounded-xl overflow-hidden'>
               <button
                 id='tab-facial'
-                className='px-7 py-2.5 text-[12px] font-bold tracking-wider tab-active rounded-xl transition-all'>
+                className='px-7 py-2.5 text-xs font-bold tracking-wider tab-active rounded-xl transition-all'>
                 Facial
               </button>
               <button
                 id='tab-corporal'
-                className='px-7 py-2.5 text-[12px] font-bold tracking-wider tab-inactive rounded-xl transition-all'>
+                className='px-7 py-2.5 text-xs font-bold tracking-wider tab-inactive rounded-xl transition-all'>
                 Corporal
               </button>
             </div>
@@ -266,37 +276,37 @@ export default function Home() {
             id='grid-facial'>
             {[
               {
-                img: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80&fit=crop',
+                img: '/usingTech.jpg',
                 title: 'Limpeza de Pele',
                 desc: 'Protocolos personalizados para desintoxicar e iluminar sua pele.',
                 wa: WA.agendar,
               },
               {
-                img: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80&fit=crop',
+                img: '/botox.jpg',
                 title: 'Botox & Preenchimento',
                 desc: 'Harmonização natural preservando suas expressões únicas.',
                 wa: WA.agendar,
               },
               {
-                img: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80&fit=crop',
+                img: '/microagulhamento.jpg',
                 title: 'Microagulhamento',
                 desc: 'Estimulação de colágeno para uma pele rejuvenescida e firme.',
                 wa: WA.agendar,
               },
               {
-                img: 'https://images.unsplash.com/photo-1599407384144-604e66b4ac10?w=600&q=80&fit=crop',
+                img: '/peeling.jpg',
                 title: 'Peeling Químico',
                 desc: 'Renovação celular para manchas, acne e pele opaca.',
                 wa: WA.agendar,
               },
               {
-                img: 'https://images.unsplash.com/photo-1559599238-308793637427?w=600&q=80&fit=crop',
-                title: 'Radiofrequência Facial',
+                img: '/radioFrequencia.jpg',
+                title: 'Radiofrequência',
                 desc: 'Estímulo de colágeno para firmeza e rejuvenescimento.',
                 wa: WA.agendar,
               },
               {
-                img: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80&fit=crop',
+                img: '/drenagem.jpg',
                 title: 'Drenagem Linfática',
                 desc: 'Redução de inchaço e melhora da circulação local.',
                 wa: WA.agendar,
@@ -314,18 +324,19 @@ export default function Home() {
                     className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-700'
                   />
                 </div>
-                <h3 className='font-playfair text-[20px] font-semibold text-primary mb-2'>
+                {/* Card H3 */}
+                <h3 className='font-playfair text-lg sm:text-xl font-semibold text-primary mb-2'>
                   {title}
                 </h3>
-                <p className='text-[14px] text-on-surface-variant mb-5 leading-relaxed'>
+                {/* Card desc */}
+                <p className='text-sm text-on-surface-variant mb-5 leading-relaxed'>
                   {desc}
                 </p>
                 <Link
                   href={wa}
                   target='_blank'
-                  className='text-secondary text-[12px] font-bold tracking-wide inline-flex items-center gap-1.5 group-hover:gap-3 transition-all'>
-                  Agendar{' '}
-                  <IoArrowForwardCircle className='material-symbols-outlined ' />
+                  className='text-secondary text-xs sm:text-sm font-bold tracking-wide inline-flex items-center gap-1.5 group-hover:gap-3 transition-all'>
+                  Agendar <IoArrowForwardCircle className='text-base' />
                 </Link>
               </div>
             ))}
@@ -378,18 +389,17 @@ export default function Home() {
                     className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-700'
                   />
                 </div>
-                <h3 className='font-playfair text-[20px] font-semibold text-primary mb-2'>
+                <h3 className='font-playfair text-lg sm:text-xl font-semibold text-primary mb-2'>
                   {title}
                 </h3>
-                <p className='text-[14px] text-on-surface-variant mb-5 leading-relaxed'>
+                <p className='text-sm text-on-surface-variant mb-5 leading-relaxed'>
                   {desc}
                 </p>
                 <Link
                   href={WA.agendar}
                   target='_blank'
-                  className='text-secondary text-[12px] font-bold tracking-wide inline-flex items-center gap-1.5 group-hover:gap-3 transition-all'>
-                  Agendar{' '}
-                  <IoArrowForwardCircle className='material-symbols-outlined ' />
+                  className='text-secondary text-xs sm:text-sm font-bold tracking-wide inline-flex items-center gap-1.5 group-hover:gap-3 transition-all'>
+                  Agendar <IoArrowForwardCircle className='text-base' />
                 </Link>
               </div>
             ))}
@@ -403,16 +413,19 @@ export default function Home() {
         className='py-stack-lg curso-section overflow-hidden'>
         <div className='max-w-container-max mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center'>
           <div className='reveal'>
-            <div className='inline-flex items-center gap-2 bg-secondary/20 text-secondary px-4 py-2 rounded-full text-[11px] font-bold tracking-widest uppercase mb-6'>
-              <IoSchool className='material-symbols-outlined ' />
+            {/* Eyebrow */}
+            <div className='inline-flex items-center gap-2 bg-secondary/20 text-secondary px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase mb-6'>
+              <IoSchool />
               Curso Presencial · Caxias do Sul
             </div>
-            <h2 className='font-playfair text-[40px] leading-[48px] font-semibold text-white mb-6'>
+            {/* H2 */}
+            <h2 className='font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-6'>
               Limpeza de Pele
               <br />
               <span className='text-secondary'>Profissional</span>
             </h2>
-            <p className='text-[15px] text-on-primary-container leading-relaxed mb-8 max-w-md'>
+            {/* Body */}
+            <p className='text-sm sm:text-base text-on-primary-container leading-relaxed mb-8 max-w-md'>
               Aprenda a executar o procedimento mais procurado na área de
               estética facial. Curso hands-on com certificado, ministrado pelas
               profissionais experientes da clínica Aisthésis.
@@ -427,8 +440,8 @@ export default function Home() {
               ].map((item) => (
                 <li
                   key={item}
-                  className='flex items-center gap-3 text-[14px] text-on-primary-container'>
-                  <FaCheckCircle className='material-symbols-outlined text-secondary text-lg' />{' '}
+                  className='flex items-center gap-3 text-sm sm:text-base text-on-primary-container'>
+                  <FaCheckCircle className='text-secondary text-base flex-shrink-0' />
                   {item}
                 </li>
               ))}
@@ -436,14 +449,14 @@ export default function Home() {
             <div className='flex flex-wrap gap-4'>
               <Link
                 href='/curso-limpeza-de-pele'
-                className='inline-flex items-center gap-2 bg-secondary text-white px-8 py-4 rounded-full text-[13px] font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-[1.02] transition-all'>
+                className='inline-flex items-center gap-2 bg-secondary text-white px-8 py-4 rounded-full text-xs sm:text-sm font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-[1.02] transition-all'>
                 Ver detalhes do curso
-                <IoArrowForwardCircle className='material-symbols-outlined text-lg' />
+                <IoArrowForwardCircle className='text-lg' />
               </Link>
               <Link
                 href={WA.curso}
                 target='_blank'
-                className='inline-flex items-center gap-2 border-2 border-secondary/40 text-secondary px-8 py-4 rounded-full text-[13px] font-bold tracking-wider uppercase hover:border-secondary transition-colors'>
+                className='inline-flex items-center gap-2 border-2 border-secondary/40 text-secondary px-8 py-4 rounded-full text-xs sm:text-sm font-bold tracking-wider uppercase hover:border-secondary transition-colors'>
                 Falar no WhatsApp
               </Link>
             </div>
@@ -454,22 +467,22 @@ export default function Home() {
               <Image
                 width={600}
                 height={500}
-                src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80&fit=crop'
+                src='/background.jpg'
                 alt='Curso de Limpeza de Pele'
                 className='w-full h-[480px] object-cover'
               />
             </div>
             <div className='absolute -bottom-6 -left-6 bg-white rounded-2xl px-6 py-5 shadow-2xl'>
-              <p className='text-[12px] font-bold text-on-surface-variant uppercase tracking-widest mb-1'>
+              <p className='text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-1'>
                 Próxima turma
               </p>
-              <p className='text-[22px] font-bold text-primary leading-none'>
+              <p className='text-xl sm:text-2xl font-bold text-primary leading-none'>
                 Vagas limitadas!
               </p>
               <Link
                 href={WA.curso}
                 target='_blank'
-                className='mt-3 flex items-center gap-1.5 text-secondary text-[12px] font-bold tracking-wide'>
+                className='mt-3 flex items-center gap-1.5 text-secondary text-xs sm:text-sm font-bold tracking-wide'>
                 Garantir minha vaga →
               </Link>
             </div>
@@ -493,23 +506,26 @@ export default function Home() {
               />
             </div>
             <div className='absolute -bottom-8 -right-6 bg-white rounded-2xl px-7 py-5 shadow-2xl border border-surface-container-highest'>
-              <p className='text-[44px] font-bold text-secondary leading-none mb-1'>
+              <p className='text-4xl font-bold text-secondary leading-none mb-1'>
                 100%
               </p>
-              <p className='text-[10px] font-bold text-on-surface-variant uppercase tracking-widest'>
+              <p className='text-xs font-bold text-on-surface-variant uppercase tracking-widest'>
                 Foco individual
               </p>
             </div>
           </div>
 
           <div className='reveal order-1 md:order-2'>
-            <span className='text-[11px] font-bold tracking-widest uppercase text-secondary block mb-4'>
+            {/* Eyebrow */}
+            <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-4'>
               Equilíbrio & Força
             </span>
-            <h2 className='font-playfair text-[40px] leading-[48px] font-semibold text-white mb-6'>
+            {/* H2 */}
+            <h2 className='font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-6'>
               Pilates com propósito
             </h2>
-            <p className='text-[15px] text-on-primary-container leading-relaxed mb-8 max-w-md'>
+            {/* Body */}
+            <p className='text-sm sm:text-base text-on-primary-container leading-relaxed mb-8 max-w-md'>
               Muito além do exercício — uma jornada de autoconhecimento e
               controle corporal. Turmas pequenas e acompanhamento
               individualizado para a sua evolução real.
@@ -523,11 +539,9 @@ export default function Home() {
               ].map(({ icon, text }) => (
                 <div
                   key={text}
-                  className='flex items-center min-w-1/2 gap-3 bg-white/10 rounded-xl px-4 py-3'>
-                  <span className='material-symbols-outlined text-secondary text-[20px]'>
-                    {icon}
-                  </span>
-                  <span className='text-[13px] font-semibold text-white'>
+                  className='flex items-center gap-3 bg-white/10 rounded-xl px-4 py-3'>
+                  <span className='text-secondary text-xl'>{icon}</span>
+                  <span className='text-xs sm:text-sm font-semibold text-white'>
                     {text}
                   </span>
                 </div>
@@ -536,9 +550,9 @@ export default function Home() {
             <Link
               href={WA.pilates}
               target='_blank'
-              className='inline-flex items-center gap-2 border-2 border-secondary text-secondary px-8 py-3.5 rounded-full text-[13px] font-bold tracking-wider uppercase hover:bg-secondary hover:text-white transition-all'>
+              className='inline-flex items-center gap-2 border-2 border-secondary text-secondary px-8 py-3.5 rounded-full text-xs sm:text-sm font-bold tracking-wider uppercase hover:bg-secondary hover:text-white transition-all'>
               Conhecer o estúdio
-              <IoArrowForwardCircle className='material-symbols-outlined ' />
+              <IoArrowForwardCircle />
             </Link>
           </div>
         </div>
@@ -550,19 +564,22 @@ export default function Home() {
         className='py-stack-lg bg-white'>
         <div className='max-w-container-max mx-auto px-margin-desktop'>
           <div className='text-center mb-14 reveal'>
-            <span className='text-[11px] font-bold tracking-widest uppercase text-secondary block mb-4'>
+            {/* Eyebrow */}
+            <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-4'>
               Nossa Equipe
             </span>
-            <h2 className='font-playfair text-[36px] leading-[44px] font-semibold text-primary'>
+            {/* H2 */}
+            <h2 className='font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary'>
               Profissionais especializadas
             </h2>
-            <p className='text-[15px] text-on-surface-variant mt-4 max-w-xl mx-auto'>
+            {/* Body */}
+            <p className='text-sm sm:text-base text-on-surface-variant mt-4 max-w-xl mx-auto'>
               Uma equipe dedicada, com formação contínua e compromisso com
               resultados reais.
             </p>
           </div>
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto  gap-8'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto gap-8'>
             {[
               {
                 img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&q=80&fit=crop&crop=face',
@@ -581,7 +598,7 @@ export default function Home() {
                   'Fisioterapeuta Graduada',
                   'Pós em Fisioterapia Dermatofuncional',
                 ],
-                cro: 'Certificado - xxxxx,',
+                cro: 'Certificado - xxxxx',
               },
             ].map(({ img, name, role, cro }, index) => (
               <div
@@ -596,19 +613,20 @@ export default function Home() {
                     className='w-full h-75 object-cover object-top group-hover:scale-105 transition-transform duration-700'
                   />
                 </div>
-                <h3 className='font-playfair text-[20px] font-semibold text-primary mb-1'>
+                {/* Card H3 */}
+                <h3 className='font-playfair text-lg sm:text-xl font-semibold text-primary mb-2'>
                   {name}
                 </h3>
-                <p className='text-xs text-secondary font-semibold mb-1'>
-                  {role.map((graduation: string, index: number) => (
+                <div className='mb-1'>
+                  {role.map((graduation, i) => (
                     <p
-                      className='block'
-                      key={index}>
+                      key={i}
+                      className='text-xs sm:text-sm text-secondary font-semibold'>
                       {graduation}
                     </p>
                   ))}
-                </p>
-                <p className='text-[12px] text-on-surface-variant'>{cro}</p>
+                </div>
+                <p className='text-xs text-on-surface-variant'>{cro}</p>
               </div>
             ))}
           </div>
@@ -619,10 +637,12 @@ export default function Home() {
       <section className='py-stack-lg bg-surface-lavender'>
         <div className='max-w-container-max mx-auto px-margin-desktop'>
           <div className='text-center mb-14 reveal'>
-            <span className='text-[11px] font-bold tracking-widest uppercase text-secondary block mb-4'>
+            {/* Eyebrow */}
+            <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-4'>
               Depoimentos
             </span>
-            <h2 className='font-playfair text-[36px] leading-[44px] font-semibold text-primary'>
+            {/* H2 */}
+            <h2 className='font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary'>
               A voz de quem confia
             </h2>
           </div>
@@ -663,17 +683,20 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-                <p className='text-[15px] text-on-surface leading-relaxed mb-8 italic'>
+                {/* Quote body */}
+                <p className='text-sm sm:text-base text-on-surface leading-relaxed mb-8 italic'>
                   &ldquo;{text}&rdquo;
                 </p>
                 <div className='flex items-center gap-3'>
                   <div
-                    className={`w-10 h-10 rounded-full ${color} text-white flex items-center justify-center text-[12px] font-bold flex-shrink-0`}>
+                    className={`w-10 h-10 rounded-full ${color} text-white flex items-center justify-center text-xs font-bold flex-shrink-0`}>
                     {initials}
                   </div>
                   <div>
-                    <p className='text-[13px] font-bold text-primary'>{name}</p>
-                    <p className='text-[11px] text-on-surface-variant uppercase tracking-wider'>
+                    <p className='text-xs sm:text-sm font-bold text-primary'>
+                      {name}
+                    </p>
+                    <p className='text-xs text-on-surface-variant uppercase tracking-wider'>
                       {service}
                     </p>
                   </div>
@@ -691,13 +714,16 @@ export default function Home() {
           <div className='absolute bottom-0 right-0 w-96 h-96 rounded-full bg-secondary blur-3xl translate-x-1/2 translate-y-1/2' />
         </div>
         <div className='relative z-10 max-w-container-max mx-auto px-margin-desktop text-center reveal'>
-          <span className='text-[11px] font-bold tracking-widest uppercase text-secondary block mb-4'>
+          {/* Eyebrow */}
+          <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-4'>
             Comece hoje
           </span>
-          <h2 className='font-playfair text-[40px] leading-[48px] font-semibold text-white mb-6 max-w-2xl mx-auto'>
+          {/* H2 */}
+          <h2 className='font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-6 max-w-2xl mx-auto'>
             Pronta para cuidar de você com quem entende?
           </h2>
-          <p className='text-[15px] text-on-primary-container mb-10 max-w-xl mx-auto leading-relaxed'>
+          {/* Body */}
+          <p className='text-sm sm:text-base text-on-primary-container mb-10 max-w-xl mx-auto leading-relaxed'>
             Agende sua avaliação gratuita e descubra o protocolo ideal para o
             seu tipo de pele e seus objetivos.
           </p>
@@ -705,12 +731,12 @@ export default function Home() {
             <Link
               href={WA.avaliacao}
               target='_blank'
-              className='bg-secondary text-white px-8 py-4 rounded-full text-[13px] font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-[1.02] transition-all'>
+              className='bg-secondary text-white px-8 py-4 rounded-full text-xs sm:text-sm font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-[1.02] transition-all'>
               Agendar avaliação gratuita
             </Link>
             <Link
               href={`tel:${PHONE_DISPLAY.replace(/\D/g, '')}`}
-              className='border-2 border-white/30 text-white px-8 py-4 rounded-full text-[13px] font-bold tracking-wider uppercase hover:border-white transition-colors'>
+              className='border-2 border-white/30 text-white px-8 py-4 rounded-full text-xs sm:text-sm font-bold tracking-wider uppercase hover:border-white transition-colors'>
               {PHONE_DISPLAY}
             </Link>
           </div>
@@ -731,7 +757,7 @@ export default function Home() {
                 height={44}
                 className='w-24 mb-5'
               />
-              <p className='text-[14px] text-on-surface-variant leading-relaxed max-w-[280px] mb-8'>
+              <p className='text-sm text-on-surface-variant leading-relaxed max-w-[280px] mb-8'>
                 Excelência em estética e pilates. Transformando vidas através do
                 cuidado e da ciência.
               </p>
@@ -740,19 +766,19 @@ export default function Home() {
                   href='https://www.instagram.com/aisthesisestetica'
                   target='_blank'
                   className='w-9 h-9 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-secondary hover:text-white hover:border-secondary transition-all'>
-                  <FaInstagram className='material-symbols-outlined w-5' />
+                  <FaInstagram className='w-4 h-4' />
                 </Link>
                 <Link
                   href={WA.contato}
                   target='_blank'
                   className='w-9 h-9 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-secondary hover:text-white hover:border-secondary transition-all'>
-                  <BsChatRightText className='material-symbols-outlined w-5' />
+                  <BsChatRightText className='w-4 h-4' />
                 </Link>
               </div>
             </div>
 
             <div className='md:col-span-3'>
-              <h4 className='text-[11px] font-bold tracking-widest uppercase text-primary mb-7'>
+              <h4 className='text-xs font-bold tracking-widest uppercase text-primary mb-7'>
                 Links Úteis
               </h4>
               <ul className='space-y-3.5'>
@@ -766,7 +792,7 @@ export default function Home() {
                   <li key={label}>
                     <Link
                       href={href}
-                      className='text-[14px] text-on-surface-variant hover:text-secondary transition-colors'>
+                      className='text-sm text-on-surface-variant hover:text-secondary transition-colors'>
                       {label}
                     </Link>
                   </li>
@@ -775,27 +801,27 @@ export default function Home() {
             </div>
 
             <div className='md:col-span-4'>
-              <h4 className='text-[11px] font-bold tracking-widest uppercase text-primary mb-7'>
+              <h4 className='text-xs font-bold tracking-widest uppercase text-primary mb-7'>
                 Contato
               </h4>
               <ul className='space-y-5'>
                 <li className='flex items-start gap-3'>
-                  <FaLocationDot className='material-symbols-outlined text-secondary text-[20px] mt-0.5' />
-                  <span className=' text-on-surface-variant leading-relaxed'>
+                  <FaLocationDot className='text-secondary text-lg mt-0.5 flex-shrink-0' />
+                  <span className='text-sm text-on-surface-variant leading-relaxed'>
                     Caxias do Sul — RS
                   </span>
                 </li>
                 <li className='flex items-center gap-3'>
-                  <MdCall className='material-symbols-outlined text-secondary ' />
+                  <MdCall className='text-secondary text-lg flex-shrink-0' />
                   <Link
                     href={`tel:${PHONE_DISPLAY.replace(/\D/g, '')}`}
-                    className='text-[14px] text-on-surface-variant hover:text-secondary transition-colors'>
+                    className='text-sm text-on-surface-variant hover:text-secondary transition-colors'>
                     {PHONE_DISPLAY}
                   </Link>
                 </li>
                 <li className='flex items-center gap-3'>
-                  <RiCalendarScheduleLine className='material-symbols-outlined text-secondary ' />
-                  <span className='text-[14px] text-on-surface-variant'>
+                  <RiCalendarScheduleLine className='text-secondary text-lg flex-shrink-0' />
+                  <span className='text-sm text-on-surface-variant'>
                     Seg – Sex: 08:00 – 20:00
                   </span>
                 </li>
@@ -803,8 +829,8 @@ export default function Home() {
                   <Link
                     href={WA.contato}
                     target='_blank'
-                    className='inline-flex items-center gap-2 bg-secondary text-white px-6 py-2.5 rounded-full text-[12px] font-bold tracking-wider hover:opacity-90 transition-opacity'>
-                    <FaWhatsapp className='material-symbols-outlined text-[16px]' />
+                    className='inline-flex items-center gap-2 bg-secondary text-white px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold tracking-wider hover:opacity-90 transition-opacity'>
+                    <FaWhatsapp className='text-base' />
                     Falar no WhatsApp
                   </Link>
                 </li>
@@ -813,19 +839,19 @@ export default function Home() {
           </div>
 
           <div className='pt-7 border-t border-surface-container-highest flex flex-col md:flex-row justify-between items-center gap-4'>
-            <p className='text-[12px] text-on-surface-variant'>
+            <p className='text-xs text-on-surface-variant'>
               © 2025 Aisthésis Clínica de Estética & Pilates. Todos os direitos
               reservados.
             </p>
             <div className='flex gap-7'>
               <Link
                 href='#'
-                className='text-[12px] text-on-surface-variant hover:text-secondary transition-colors'>
+                className='text-xs text-on-surface-variant hover:text-secondary transition-colors'>
                 Termos de Uso
               </Link>
               <Link
                 href='#'
-                className='text-[12px] text-on-surface-variant hover:text-secondary transition-colors'>
+                className='text-xs text-on-surface-variant hover:text-secondary transition-colors'>
                 Privacidade
               </Link>
             </div>
