@@ -19,7 +19,7 @@ import {
 } from 'react-icons/io5';
 import { FaCheckCircle, FaInstagram } from 'react-icons/fa';
 import { BsChatRightText } from 'react-icons/bs';
-import { FaLocationDot, FaWhatsapp } from 'react-icons/fa6';
+import { FaLocationDot, FaStar, FaWhatsapp } from 'react-icons/fa6';
 import { RiCalendarScheduleLine } from 'react-icons/ri';
 
 export default function Home() {
@@ -71,12 +71,15 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className='hero-section pt-16 sm:pt-20 pb-10'>
-        <div className='hero-photo' />
+        <div
+          className='absolute inset-0 left-0 z-0 bg-center bg-cover bg-no-repeat hero-photo'
+          style={{ backgroundImage: "url('/background.jpg')" }}
+        />
 
         <div className='relative z-10 px-4 max-w-container-max mx-auto w-full'>
           <div className='max-w-[560px]'>
             {/* Eyebrow label */}
-            <div className='inline-flex w-52 items-center gap-2 bg-secondary/10 border border-secondary/20 text-primary px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase mb-8'>
+            <div className='inline-flex  items-center gap-2 bg-secondary/10 border border-secondary/20 text-primary px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase mb-8'>
               <span className='w-1.5 h-1.5 rounded-full bg-secondary inline-block' />
               Clínica de Estética & Pilates · Caxias do Sul
             </div>
@@ -96,7 +99,7 @@ export default function Home() {
             </h1>
 
             {/* Body */}
-            <p className='text-sm sm:text-base text-on-surface-variant font-light leading-relaxed max-w-md mb-10 reveal'>
+            <p className='text-sm sm:text-base text-on-surface-variant font-light leading-relaxed max-w-48 sm:max-w-sm min-[400px]:max-w-64 mb-10 reveal '>
               Um refúgio de tranquilidade onde a ciência estética encontra o
               cuidado humano — para revelar sua melhor versão.
             </p>
@@ -300,7 +303,7 @@ export default function Home() {
                 wa: WA.agendar,
               },
               {
-                img: '/radioFrequencia.jpg',
+                img: '/radioFrequenciaFacial.jpg',
                 title: 'Radiofrequência',
                 desc: 'Estímulo de colágeno para firmeza e rejuvenescimento.',
                 wa: WA.agendar,
@@ -347,17 +350,17 @@ export default function Home() {
             id='grid-corporal'>
             {[
               {
-                img: 'https://images.unsplash.com/photo-1602052793312-b99c2a9ee797?w=600&q=80&fit=crop',
+                img: '/modelagem.jpg',
                 title: 'Modelagem Corporal',
                 desc: 'Redução de medidas e modelagem com tecnologia avançada.',
               },
               {
-                img: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80&fit=crop',
+                img: '/drenagemCorporal.jpg',
                 title: 'Drenagem Corporal',
                 desc: 'Ativação do sistema linfático para reduzir retenção.',
               },
               {
-                img: 'https://images.unsplash.com/photo-1591343395082-e120087004b4?w=600&q=80&fit=crop',
+                img: '/radioFrequencia.jpg',
                 title: 'Radiofrequência Corporal',
                 desc: 'Tratamento de flacidez e celulite com resultados visíveis.',
               },
@@ -367,12 +370,12 @@ export default function Home() {
                 desc: 'Alívio de tensões com técnicas profissionais de massoterapia.',
               },
               {
-                img: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80&fit=crop',
+                img: '/criolipólise.jpg',
                 title: 'Criolipólise',
                 desc: 'Eliminação de gordura localizada pelo frio, sem cirurgia.',
               },
               {
-                img: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80&fit=crop',
+                img: '/ultrassom.jpg',
                 title: 'Ultrassom Cavitacional',
                 desc: 'Destruição de células de gordura por ondas ultrassônicas.',
               },
@@ -582,7 +585,7 @@ export default function Home() {
           <div className='grid grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto gap-8'>
             {[
               {
-                img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&q=80&fit=crop&crop=face',
+                img: '/daniella.png',
                 name: 'DANIELLA DEMOSSI BASSANI',
                 role: [
                   'Fisioterapeuta Graduada',
@@ -592,7 +595,7 @@ export default function Home() {
                 cro: 'Certificado - xxxxx',
               },
               {
-                img: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=500&q=80&fit=crop&crop=face',
+                img: '/roberta.png',
                 name: 'ROBERTA VEBER TOSCAN',
                 role: [
                   'Fisioterapeuta Graduada',
@@ -617,15 +620,15 @@ export default function Home() {
                 <h3 className='font-playfair text-lg sm:text-xl font-semibold text-primary mb-2'>
                   {name}
                 </h3>
-                <div className='mb-1'>
+                <ul className='mb-1'>
                   {role.map((graduation, i) => (
-                    <p
+                    <li
                       key={i}
-                      className='text-xs sm:text-sm text-secondary font-semibold'>
+                      className='text-xs sm:text-sm text-secondary font-semibold list-disc '>
                       {graduation}
-                    </p>
+                    </li>
                   ))}
-                </div>
+                </ul>
                 <p className='text-xs text-on-surface-variant'>{cro}</p>
               </div>
             ))}
@@ -676,11 +679,10 @@ export default function Home() {
                 className='dep-card reveal'>
                 <div className='flex text-yellow-400 gap-0.5 mb-5'>
                   {[...Array(5)].map((_, i) => (
-                    <span
+                    <FaStar
                       key={i}
-                      className='material-symbols-outlined fill-icon text-xl'>
-                      star
-                    </span>
+                      className='material-symbols-outlined fill-icon text-xl'
+                    />
                   ))}
                 </div>
                 {/* Quote body */}

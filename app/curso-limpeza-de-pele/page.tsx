@@ -351,13 +351,13 @@ export default function CursoLimpezaDePele() {
       <section className='py-stack-lg bg-white'>
         <div className='max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center'>
           <div className='reveal'>
-            <div className='rounded-2xl overflow-hidden shadow-xl'>
+            <div className=' w-max'>
               <Image
                 width={600}
                 height={500}
-                src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=85&fit=crop'
+                src='/roberta.png'
                 alt='Para quem é o curso'
-                className='w-full h-[460px] object-cover'
+                className='w-full h-115 object-contain rounded-2xl overflow-hidden shadow-xl'
               />
             </div>
           </div>
