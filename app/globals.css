@@ -213,7 +213,7 @@ body {
 /* ── Tabs ── */
 .tab-active {
   background: #00b4c8;
-  color: #fff;
+  color: #0f1f3d; /* dark navy on teal → 6.6:1 contrast ✓ */
 }
 .tab-inactive {
   color: #45474e;
