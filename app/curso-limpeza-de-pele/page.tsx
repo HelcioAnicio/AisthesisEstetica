@@ -311,7 +311,7 @@ export default function CursoLimpezaDePele() {
           className='py-stack-lg bg-white'>
           <div className='max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center'>
             <div className='reveal'>
-              <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-4'>
+              <span className='text-xs font-bold tracking-widest uppercase text-primary block mb-4'>
                 Por que fazer este curso?
               </span>
               <h2
@@ -342,7 +342,7 @@ export default function CursoLimpezaDePele() {
                     key={label}
                     className='bg-surface rounded-2xl p-5'>
                     <dt className='text-xs text-on-surface-variant'>{label}</dt>
-                    <dd className='text-2xl sm:text-3xl font-bold text-secondary leading-none mb-1'>
+                    <dd className='text-2xl sm:text-3xl font-bold text-primary leading-none mb-1'>
                       {num}
                     </dd>
                   </div>
@@ -372,7 +372,7 @@ export default function CursoLimpezaDePele() {
           className='py-stack-lg bg-surface'>
           <div className='max-w-container-max mx-auto px-margin-desktop'>
             <div className='text-center mb-14 reveal'>
-              <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-4'>
+              <span className='text-xs font-bold tracking-widest uppercase text-primary block mb-4'>
                 Grade Curricular
               </span>
               <h2
@@ -431,7 +431,7 @@ export default function CursoLimpezaDePele() {
             </div>
 
             <div className='reveal'>
-              <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-4'>
+              <span className='text-xs font-bold tracking-widest uppercase text-primary block mb-4'>
                 Público-alvo
               </span>
               <h2
@@ -567,7 +567,7 @@ export default function CursoLimpezaDePele() {
           className='py-stack-lg bg-surface-lavender'>
           <div className='max-w-container-max mx-auto px-margin-desktop'>
             <div className='text-center mb-14 reveal'>
-              <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-4'>
+              <span className='text-xs font-bold tracking-widest uppercase text-primary block mb-4'>
                 Quem já fez
               </span>
               <h2
@@ -644,7 +644,7 @@ export default function CursoLimpezaDePele() {
           className='py-stack-lg bg-white'>
           <div className='max-w-container-max mx-auto px-margin-desktop'>
             <div className='text-center mb-14 reveal'>
-              <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-4'>
+              <span className='text-xs font-bold tracking-widest uppercase text-primary block mb-4'>
                 Dúvidas
               </span>
               <h2

@@ -46,9 +46,7 @@ export default function Home() {
                 className='object-contain w-12 md:w-20'
               />
             </Link>
-            <div
-              className='hidden md:flex items-center gap-8'
-              role='list'>
+            <div className='hidden md:flex items-center gap-8'>
               {[
                 ['A Clínica', '#sobre'],
                 ['Tratamentos', '#tratamentos'],
@@ -60,7 +58,6 @@ export default function Home() {
                 <Link
                   key={label}
                   href={href}
-                  role='listitem'
                   className='text-xs font-semibold text-on-surface-variant hover:text-primary transition-colors tracking-wider uppercase'>
                   {label}
                 </Link>
@@ -85,9 +82,17 @@ export default function Home() {
           className='hero-section pt-16 sm:pt-20 pb-10'>
           <div
             aria-hidden='true'
-            className='absolute inset-0 left-0 z-0 bg-center bg-cover bg-no-repeat hero-photo'
-            style={{ backgroundImage: "url('/background.jpg')" }}
-          />
+            className='absolute inset-0 left-0 z-0 hero-photo overflow-hidden'>
+            <Image
+              src='/background.jpg'
+              alt=''
+              fill
+              priority
+              sizes='100vw'
+              quality={80}
+              className='object-cover object-center'
+            />
+          </div>
 
           <div className='relative z-10 px-4 max-w-container-max mx-auto w-full'>
             <div className='max-w-[560px]'>
@@ -203,7 +208,7 @@ export default function Home() {
             </div>
 
             <div className='reveal'>
-              <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-4'>
+              <span className='text-xs font-bold tracking-widest uppercase text-primary block mb-4'>
                 Sobre Nós
               </span>
               <h2
@@ -278,7 +283,7 @@ export default function Home() {
           <div className='max-w-container-max mx-auto px-4'>
             <div className='flex flex-col md:flex-row justify-between items-end mb-14 gap-6 reveal'>
               <div>
-                <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-3'>
+                <span className='text-xs font-bold tracking-widest uppercase text-primary block mb-3'>
                   Serviços
                 </span>
                 <h2
@@ -377,7 +382,7 @@ export default function Home() {
                     target='_blank'
                     rel='noopener noreferrer'
                     aria-label={`Agendar ${title} no WhatsApp`}
-                    className='text-secondary text-xs sm:text-sm font-bold tracking-wide inline-flex items-center gap-1.5 group-hover:gap-3 transition-all'>
+                    className='text-primary text-xs sm:text-sm font-bold tracking-wide inline-flex items-center gap-1.5 group-hover:gap-3 transition-all'>
                     Agendar{' '}
                     <IoArrowForwardCircle
                       aria-hidden='true'
@@ -449,7 +454,7 @@ export default function Home() {
                     target='_blank'
                     rel='noopener noreferrer'
                     aria-label={`Agendar ${title} no WhatsApp`}
-                    className='text-secondary text-xs sm:text-sm font-bold tracking-wide inline-flex items-center gap-1.5 group-hover:gap-3 transition-all'>
+                    className='text-primary text-xs sm:text-sm font-bold tracking-wide inline-flex items-center gap-1.5 group-hover:gap-3 transition-all'>
                     Agendar{' '}
                     <IoArrowForwardCircle
                       aria-hidden='true'
@@ -639,7 +644,7 @@ export default function Home() {
           className='py-stack-lg bg-white'>
           <div className='max-w-container-max mx-auto px-margin-desktop'>
             <div className='text-center mb-14 reveal'>
-              <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-4'>
+              <span className='text-xs font-bold tracking-widest uppercase text-primary block mb-4'>
                 Nossa Equipe
               </span>
               <h2
@@ -695,7 +700,7 @@ export default function Home() {
                     {role.map((graduation) => (
                       <li
                         key={graduation}
-                        className='text-xs sm:text-sm text-secondary font-semibold list-disc'>
+                        className='text-xs sm:text-sm text-primary font-semibold list-disc'>
                         {graduation}
                       </li>
                     ))}
@@ -713,7 +718,7 @@ export default function Home() {
           className='py-stack-lg bg-surface-lavender'>
           <div className='max-w-container-max mx-auto px-margin-desktop'>
             <div className='text-center mb-14 reveal'>
-              <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-4'>
+              <span className='text-xs font-bold tracking-widest uppercase text-primary block mb-4'>
                 Depoimentos
               </span>
               <h2

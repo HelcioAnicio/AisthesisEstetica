@@ -120,12 +120,6 @@ export default function RootLayout({
       className={`${playfair.variable} ${manrope.variable} h-full`}>
       <head>
         <link rel='preconnect' href='https://images.unsplash.com' />
-        <link
-          rel='preload'
-          as='image'
-          href='/background.jpg'
-          fetchPriority='high'
-        />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
