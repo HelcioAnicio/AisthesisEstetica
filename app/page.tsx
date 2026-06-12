@@ -81,10 +81,13 @@ export default function Home() {
           sizes='100vw'
           className='object-cover object-center z-0'
         />
-        <div className='hero-gradient' aria-hidden='true' />
+        <div
+          className='hero-gradient'
+          aria-hidden='true'
+        />
 
         <div className='relative z-10 px-4 max-w-container-max mx-auto w-full'>
-          <div className='max-w-[560px]'>
+          <div className='max-w-140'>
             {/* Eyebrow label */}
             <div className='inline-flex  items-center gap-2 bg-secondary/10 border border-secondary/20 text-primary px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase mb-8'>
               <span className='w-1.5 h-1.5 rounded-full bg-secondary inline-block' />
@@ -159,7 +162,7 @@ export default function Home() {
               sizes='(min-width: 768px) 25vw, 50vw'
               src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80&fit=crop'
               alt='Tratamento facial'
-              className='w-full h-[240px] object-cover rounded-2xl'
+              className='w-full h-60 object-cover rounded-2xl'
             />
             <Image
               width={400}
@@ -167,7 +170,7 @@ export default function Home() {
               sizes='(min-width: 768px) 25vw, 50vw'
               src='https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80&fit=crop'
               alt='Clínica Aisthésis'
-              className='w-full h-[185px] object-cover rounded-2xl mt-6'
+              className='w-full h-46.25 object-cover rounded-2xl mt-6'
             />
             <Image
               width={400}
@@ -175,7 +178,7 @@ export default function Home() {
               sizes='(min-width: 768px) 25vw, 50vw'
               src='https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=600&q=80&fit=crop'
               alt='Equipamentos'
-              className='w-full h-[185px] object-cover rounded-2xl'
+              className='w-full h-46.25 object-cover rounded-2xl'
             />
             <Image
               width={400}
@@ -183,7 +186,7 @@ export default function Home() {
               sizes='(min-width: 768px) 25vw, 50vw'
               src='/proveValue.jpg'
               alt='Consulta estética'
-              className='w-full h-[240px] object-cover rounded-2xl -mt-10 relative z-10'
+              className='w-full h-60 object-cover rounded-2xl -mt-10 relative z-10'
             />
           </div>
 
@@ -228,7 +231,7 @@ export default function Home() {
                 <div
                   key={title}
                   className='flex items-center gap-4 group'>
-                  <div className='w-11 h-11 bg-surface-lavender rounded-xl flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors flex-shrink-0'>
+                  <div className='w-11 h-11 bg-surface-lavender rounded-xl flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors shrink-0'>
                     <span className='text-xl'>{icon}</span>
                   </div>
                   <div>
@@ -329,7 +332,7 @@ export default function Home() {
               <div
                 key={title}
                 className='trat-card reveal group'>
-                <div className='rounded-xl overflow-hidden aspect-[4/3] mb-5'>
+                <div className='rounded-xl overflow-hidden aspect-4/3 mb-5'>
                   <Image
                     width={500}
                     height={375}
@@ -395,7 +398,7 @@ export default function Home() {
               <div
                 key={title}
                 className='trat-card reveal group'>
-                <div className='rounded-xl overflow-hidden aspect-[4/3] mb-5'>
+                <div className='rounded-xl overflow-hidden aspect-4/3 mb-5'>
                   <Image
                     width={500}
                     height={375}
@@ -457,7 +460,7 @@ export default function Home() {
                 <li
                   key={item}
                   className='flex items-center gap-3 text-sm sm:text-base text-on-primary-container'>
-                  <FaCheckCircle className='text-secondary text-base flex-shrink-0' />
+                  <FaCheckCircle className='text-secondary text-base shrink-0' />
                   {item}
                 </li>
               ))}
@@ -486,7 +489,7 @@ export default function Home() {
                 sizes='(min-width: 768px) 50vw, 100vw'
                 src='/background.jpg'
                 alt='Curso de Limpeza de Pele'
-                className='w-full h-[480px] object-cover'
+                className='w-full h-120 object-cover'
               />
             </div>
             <div className='absolute -bottom-6 -left-6 bg-white rounded-2xl px-6 py-5 shadow-2xl'>
@@ -520,7 +523,7 @@ export default function Home() {
                 sizes='(min-width: 768px) 50vw, 100vw'
                 src='https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&q=80&fit=crop'
                 alt='Estúdio de Pilates Aisthésis'
-                className='w-full h-[500px] object-cover hover:scale-105 transition-transform duration-300'
+                className='w-full h-125 object-cover hover:scale-105 transition-transform duration-300'
               />
             </div>
             <div className='absolute -bottom-8 -right-6 bg-white rounded-2xl px-7 py-5 shadow-2xl border border-surface-container-highest'>
@@ -707,7 +710,7 @@ export default function Home() {
                 </p>
                 <div className='flex items-center gap-3'>
                   <div
-                    className={`w-10 h-10 rounded-full ${color} text-white flex items-center justify-center text-xs font-bold flex-shrink-0`}>
+                    className={`w-10 h-10 rounded-full ${color} text-white flex items-center justify-center text-xs font-bold shrink-0`}>
                     {initials}
                   </div>
                   <div>
@@ -776,7 +779,7 @@ export default function Home() {
                 sizes='140px'
                 className='w-24 mb-5'
               />
-              <p className='text-sm text-on-surface-variant leading-relaxed max-w-[280px] mb-8'>
+              <p className='text-sm text-on-surface-variant leading-relaxed max-w-70 mb-8'>
                 Excelência em estética e pilates. Transformando vidas através do
                 cuidado e da ciência.
               </p>
@@ -825,13 +828,13 @@ export default function Home() {
               </h4>
               <ul className='space-y-5'>
                 <li className='flex items-start gap-3'>
-                  <FaLocationDot className='text-secondary text-lg mt-0.5 flex-shrink-0' />
+                  <FaLocationDot className='text-secondary text-lg mt-0.5 shrink-0' />
                   <span className='text-sm text-on-surface-variant leading-relaxed'>
                     Caxias do Sul — RS
                   </span>
                 </li>
                 <li className='flex items-center gap-3'>
-                  <MdCall className='text-secondary text-lg flex-shrink-0' />
+                  <MdCall className='text-secondary text-lg shrink-0' />
                   <Link
                     href={`tel:${PHONE_DISPLAY.replace(/\D/g, '')}`}
                     className='text-sm text-on-surface-variant hover:text-secondary transition-colors'>
@@ -839,7 +842,7 @@ export default function Home() {
                   </Link>
                 </li>
                 <li className='flex items-center gap-3'>
-                  <RiCalendarScheduleLine className='text-secondary text-lg flex-shrink-0' />
+                  <RiCalendarScheduleLine className='text-secondary text-lg shrink-0' />
                   <span className='text-sm text-on-surface-variant'>
                     Seg – Sex: 08:00 – 20:00
                   </span>

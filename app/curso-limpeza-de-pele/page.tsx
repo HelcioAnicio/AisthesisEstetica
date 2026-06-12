@@ -153,11 +153,11 @@ export default function CursoLimpezaDePele() {
             className='object-cover opacity-30 md:opacity-60'
             priority
           />
-          <div className='absolute inset-0 bg-gradient-to-r from-primary via-primary/80 md:via-primary/40 to-transparent' />
+          <div className='absolute inset-0 bg-linear-to-r from-primary via-primary/80 md:via-primary/40 to-transparent' />
         </div>
 
         <div className='relative z-10 max-w-container-max mx-auto px-margin-desktop w-full'>
-          <div className='max-w-[600px]'>
+          <div className='max-w-150'>
             <Link
               href='/'
               className='text-xs font-semibold text-white/70 hover:text-white transition-colors tracking-wider uppercase mb-10 inline-block'>
@@ -294,7 +294,7 @@ export default function CursoLimpezaDePele() {
                 sizes='(min-width: 768px) 50vw, 100vw'
                 src='https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=85&fit=crop'
                 alt='Prática do curso de limpeza de pele'
-                className='w-full h-[520px] object-cover'
+                className='w-full h-130 object-cover'
               />
             </div>
           </div>
@@ -329,7 +329,7 @@ export default function CursoLimpezaDePele() {
                 className='bg-white rounded-2xl p-7 border border-surface-container-highest reveal hover:shadow-lg transition-shadow'>
                 <div className='flex items-start gap-5'>
                   {/* Decorative number */}
-                  <span className='text-4xl font-bold text-secondary/20 leading-none font-playfair flex-shrink-0'>
+                  <span className='text-4xl font-bold text-secondary/20 leading-none font-playfair shrink-0'>
                     {num}
                   </span>
                   <div>
@@ -384,7 +384,7 @@ export default function CursoLimpezaDePele() {
                 <div
                   key={texto}
                   className='flex items-center gap-4'>
-                  <div className='w-11 h-11 bg-surface-lavender rounded-xl flex items-center justify-center text-secondary flex-shrink-0'>
+                  <div className='w-11 h-11 bg-surface-lavender rounded-xl flex items-center justify-center text-secondary shrink-0'>
                     <span className='material-symbols-outlined text-xl'>
                       {icon}
                     </span>
@@ -421,7 +421,7 @@ export default function CursoLimpezaDePele() {
                 <li
                   key={item}
                   className='flex items-center gap-4'>
-                  <div className='w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0'>
+                  <div className='w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center shrink-0'>
                     <FaCheckCircle className='material-symbols-outlined fill-icon text-secondary text-base' />
                   </div>
                   <span className='text-sm sm:text-base text-on-primary-container'>
@@ -548,7 +548,7 @@ export default function CursoLimpezaDePele() {
                   &ldquo;{text}&rdquo;
                 </p>
                 <div className='flex items-center gap-3'>
-                  <div className='w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center text-xs font-bold flex-shrink-0'>
+                  <div className='w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center text-xs font-bold shrink-0'>
                     {initials}
                   </div>
                   <div>
