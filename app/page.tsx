@@ -182,7 +182,7 @@ export default function Home() {
               Sobre Nós
             </span>
             {/* H2 */}
-            <h2 className='font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary mb-6'>
+            <h2 className='font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold text-primary mb-6'>
               Conheça a Aisthésis
             </h2>
             {/* Body */}
@@ -249,26 +249,26 @@ export default function Home() {
         id='tratamentos'
         className='py-stack-lg bg-surface'>
         <div className='max-w-container-max mx-auto px-4'>
-          <div className='flex flex-col md:flex-row justify-between items-end mb-14 gap-6 reveal'>
+          <div className='flex flex-col md:flex-row justify-between mb-14 gap-6 reveal'>
             <div>
               {/* Eyebrow */}
               <span className='text-xs font-bold tracking-widest uppercase text-secondary block mb-3'>
                 Serviços
               </span>
               {/* H2 */}
-              <h2 className='font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary'>
+              <h2 className='font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold text-primary'>
                 Nossos Tratamentos
               </h2>
             </div>
-            <div className='flex gap-0 border border-outline-variant rounded-xl overflow-hidden'>
+            <div className='flex gap-0 self-end border w-max sm:w-72 border-outline-variant rounded-xl overflow-hidden'>
               <button
                 id='tab-facial'
-                className='px-7 py-2.5 text-xs font-bold tracking-wider tab-active rounded-xl transition-all'>
+                className='px-7 py-2.5 flex-1 text-xs sm:text-sm font-bold tracking-wider tab-active rounded-xl transition-all'>
                 Facial
               </button>
               <button
                 id='tab-corporal'
-                className='px-7 py-2.5 text-xs font-bold tracking-wider tab-inactive rounded-xl transition-all'>
+                className='px-7 py-2.5 flex-1 text-xs sm:text-sm font-bold tracking-wider tab-inactive rounded-xl transition-all'>
                 Corporal
               </button>
             </div>
@@ -422,7 +422,7 @@ export default function Home() {
               Curso Presencial · Caxias do Sul
             </div>
             {/* H2 */}
-            <h2 className='font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-6'>
+            <h2 className='font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-6'>
               Limpeza de Pele
               <br />
               <span className='text-secondary'>Profissional</span>
@@ -524,7 +524,7 @@ export default function Home() {
               Equilíbrio & Força
             </span>
             {/* H2 */}
-            <h2 className='font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-6'>
+            <h2 className='font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-6'>
               Pilates com propósito
             </h2>
             {/* Body */}
@@ -572,7 +572,7 @@ export default function Home() {
               Nossa Equipe
             </span>
             {/* H2 */}
-            <h2 className='font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary'>
+            <h2 className='font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold text-primary'>
               Profissionais especializadas
             </h2>
             {/* Body */}
@@ -645,7 +645,7 @@ export default function Home() {
               Depoimentos
             </span>
             {/* H2 */}
-            <h2 className='font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary'>
+            <h2 className='font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold text-primary'>
               A voz de quem confia
             </h2>
           </div>
@@ -721,7 +721,7 @@ export default function Home() {
             Comece hoje
           </span>
           {/* H2 */}
-          <h2 className='font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-6 max-w-2xl mx-auto'>
+          <h2 className='font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-6 max-w-2xl mx-auto'>
             Pronta para cuidar de você com quem entende?
           </h2>
           {/* Body */}
