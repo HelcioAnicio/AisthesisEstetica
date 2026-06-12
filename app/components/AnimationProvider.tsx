@@ -17,16 +17,6 @@ export default function AnimationProvider() {
     );
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-    // Word stagger on hero
-    const words = document.querySelectorAll<HTMLElement>('.word-stagger');
-    words.forEach((word, i) => {
-      setTimeout(() => {
-        word.style.opacity = '1';
-        word.style.transform = 'translateY(0)';
-        word.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
-      }, 200 + i * 80);
-    });
-
     // Nav scroll effect
     const nav = document.getElementById('top-nav');
     const handleScroll = () => {

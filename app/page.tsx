@@ -1,3 +1,4 @@
+import type React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import AnimationProvider from './components/AnimationProvider';
@@ -96,16 +97,16 @@ export default function Home() {
 
             {/* H1 */}
             <h1 className='font-playfair text-4xl sm:text-5xl lg:text-6xl lg:leading-tight font-semibold text-primary mb-6'>
-              <span className='word-stagger'>Realce</span>{' '}
-              <span className='word-stagger'>sua</span>{' '}
-              <span className='word-stagger italic text-secondary'>
+              <span className='word-stagger' style={{'--wd': '0.20s'} as React.CSSProperties}>Realce</span>{' '}
+              <span className='word-stagger' style={{'--wd': '0.28s'} as React.CSSProperties}>sua</span>{' '}
+              <span className='word-stagger italic text-secondary' style={{'--wd': '0.36s'} as React.CSSProperties}>
                 beleza.
               </span>
               <br />
-              <span className='word-stagger'>Confie</span>{' '}
-              <span className='word-stagger'>em</span>{' '}
-              <span className='word-stagger'>quem</span>{' '}
-              <span className='word-stagger'>cuida.</span>
+              <span className='word-stagger' style={{'--wd': '0.44s'} as React.CSSProperties}>Confie</span>{' '}
+              <span className='word-stagger' style={{'--wd': '0.52s'} as React.CSSProperties}>em</span>{' '}
+              <span className='word-stagger' style={{'--wd': '0.60s'} as React.CSSProperties}>quem</span>{' '}
+              <span className='word-stagger' style={{'--wd': '0.68s'} as React.CSSProperties}>cuida.</span>
             </h1>
 
             {/* Body */}
