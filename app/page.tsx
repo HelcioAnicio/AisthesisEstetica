@@ -39,6 +39,7 @@ export default function Home() {
                 alt='Aisthésis'
                 width={120}
                 height={38}
+                sizes='120px'
                 className='object-contain w-12 md:w-20'
               />
             </div>
@@ -71,10 +72,16 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className='hero-section pt-16 sm:pt-20 pb-10'>
-        <div
-          className='absolute inset-0 left-0 z-0 bg-center bg-cover bg-no-repeat hero-photo'
-          style={{ backgroundImage: "url('/background.jpg')" }}
+        <Image
+          src='/background.jpg'
+          alt=''
+          fill
+          priority
+          quality={80}
+          sizes='100vw'
+          className='object-cover object-center z-0'
         />
+        <div className='hero-gradient' aria-hidden='true' />
 
         <div className='relative z-10 px-4 max-w-container-max mx-auto w-full'>
           <div className='max-w-[560px]'>
@@ -149,6 +156,7 @@ export default function Home() {
             <Image
               width={400}
               height={200}
+              sizes='(min-width: 768px) 25vw, 50vw'
               src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80&fit=crop'
               alt='Tratamento facial'
               className='w-full h-[240px] object-cover rounded-2xl'
@@ -156,6 +164,7 @@ export default function Home() {
             <Image
               width={400}
               height={300}
+              sizes='(min-width: 768px) 25vw, 50vw'
               src='https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80&fit=crop'
               alt='Clínica Aisthésis'
               className='w-full h-[185px] object-cover rounded-2xl mt-6'
@@ -163,6 +172,7 @@ export default function Home() {
             <Image
               width={400}
               height={200}
+              sizes='(min-width: 768px) 25vw, 50vw'
               src='https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=600&q=80&fit=crop'
               alt='Equipamentos'
               className='w-full h-[185px] object-cover rounded-2xl'
@@ -170,6 +180,7 @@ export default function Home() {
             <Image
               width={400}
               height={300}
+              sizes='(min-width: 768px) 25vw, 50vw'
               src='/proveValue.jpg'
               alt='Consulta estética'
               className='w-full h-[240px] object-cover rounded-2xl -mt-10 relative z-10'
@@ -322,6 +333,7 @@ export default function Home() {
                   <Image
                     width={500}
                     height={375}
+                    sizes='(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw'
                     src={img}
                     alt={title}
                     className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-700'
@@ -387,6 +399,7 @@ export default function Home() {
                   <Image
                     width={500}
                     height={375}
+                    sizes='(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw'
                     src={img}
                     alt={title}
                     className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-700'
@@ -470,6 +483,7 @@ export default function Home() {
               <Image
                 width={600}
                 height={500}
+                sizes='(min-width: 768px) 50vw, 100vw'
                 src='/background.jpg'
                 alt='Curso de Limpeza de Pele'
                 className='w-full h-[480px] object-cover'
@@ -501,8 +515,9 @@ export default function Home() {
           <div className='relative reveal order-2 md:order-1'>
             <div className='rounded-2xl overflow-hidden shadow-2xl'>
               <Image
-                width={600}
-                height={500}
+                width={6}
+                height={5}
+                sizes='(min-width: 768px) 50vw, 100vw'
                 src='https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&q=80&fit=crop'
                 alt='Estúdio de Pilates Aisthésis'
                 className='w-full h-[500px] object-cover hover:scale-105 transition-transform duration-300'
@@ -611,6 +626,7 @@ export default function Home() {
                   <Image
                     width={400}
                     height={400}
+                    sizes='(min-width: 768px) 33vw, 100vw'
                     src={img}
                     alt={name}
                     className='w-full h-75 object-cover object-top group-hover:scale-105 transition-transform duration-700'
@@ -757,6 +773,7 @@ export default function Home() {
                 alt='Aisthésis'
                 width={140}
                 height={44}
+                sizes='140px'
                 className='w-24 mb-5'
               />
               <p className='text-sm text-on-surface-variant leading-relaxed max-w-[280px] mb-8'>

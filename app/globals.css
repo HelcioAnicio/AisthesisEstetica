@@ -143,29 +143,21 @@ body {
   overflow: hidden;
   background: #ffffff;
 }
-/* .hero-photo {
+.hero-gradient {
   position: absolute;
   inset: 0;
-  left: 42%;
-  background: url('public/background.jpg') top / cover no-repeat;
-  z-index: 0;
-} */
-.hero-photo::before {
-  content: '';
-  position: absolute;
-  inset: 0;
+  z-index: 1;
   background: linear-gradient(
     to right,
     #ffffff 0%,
     #ffffff 40%,
     rgba(255, 255, 255, 0.85) 63%,
     rgba(255, 255, 255, 0.5) 78%,
-    rgba(255, 255, 255, 0.2) 85%
+    rgba(255, 255, 255, 0) 95%
   );
-  z-index: 1;
 }
 @media (min-width: 768px) {
-  .hero-photo::before {
+  .hero-gradient {
     background: linear-gradient(
       to right,
       #ffffff 0%,
@@ -175,20 +167,6 @@ body {
       rgba(255, 255, 255, 0) 85%
     );
   }
-}
-.hero-photo::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 160px;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.5) 0%,
-    transparent 100%
-  );
-  z-index: 1;
 }
 
 /* ── Sobre: imagens grid ── */

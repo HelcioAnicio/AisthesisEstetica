@@ -129,6 +129,7 @@ export default function CursoLimpezaDePele() {
                 alt='Aisthésis'
                 width={120}
                 height={38}
+                sizes='120px'
                 className='object-contain w-12 md:w-14'
               />
             </Link>
@@ -290,6 +291,7 @@ export default function CursoLimpezaDePele() {
               <Image
                 width={600}
                 height={680}
+                sizes='(min-width: 768px) 50vw, 100vw'
                 src='https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=85&fit=crop'
                 alt='Prática do curso de limpeza de pele'
                 className='w-full h-[520px] object-cover'
@@ -355,6 +357,7 @@ export default function CursoLimpezaDePele() {
               <Image
                 width={600}
                 height={500}
+                sizes='(min-width: 768px) 50vw, 100vw'
                 src='/roberta.png'
                 alt='Para quem é o curso'
                 className='w-full h-115 object-contain rounded-2xl overflow-hidden shadow-xl'
@@ -641,6 +644,7 @@ export default function CursoLimpezaDePele() {
               alt='Aisthésis'
               width={100}
               height={32}
+              sizes='100px'
               className='object-contain'
             />
           </Link>
