@@ -67,44 +67,30 @@ body {
   background-color: var(--color-background);
 }
 
-/* ── Material Symbols ── */
-.material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
-  font-family: 'Material Symbols Outlined';
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
+/* ── Skip link ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 9999;
+  padding: 12px 20px;
+  background: var(--color-secondary);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0 0 8px 0;
+  transition: top 0.2s;
 }
-.fill-icon {
-  font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
+.skip-link:focus {
+  top: 0;
 }
 
-/* ── Curso banner ── */
-.course-banner {
-  background: #0f1f3d;
-  padding: 10px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 60;
+/* ── Focus visible ── */
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* ── Reveal animation ── */
@@ -127,6 +113,24 @@ body {
   transform: translateY(12px);
 }
 
+/* ── Reduced motion: skip all transitions ── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.active {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .word-stagger {
+    opacity: 1;
+    transform: none;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
 /* ── Nav scrolled ── */
 .nav-scrolled {
   background-color: rgba(255, 255, 255, 0.92) !important;
@@ -143,13 +147,6 @@ body {
   overflow: hidden;
   background: #ffffff;
 }
-/* .hero-photo {
-  position: absolute;
-  inset: 0;
-  left: 42%;
-  background: url('public/background.jpg') top / cover no-repeat;
-  z-index: 0;
-} */
 .hero-photo::before {
   content: '';
   position: absolute;
@@ -216,7 +213,7 @@ body {
 /* ── Tabs ── */
 .tab-active {
   background: #00b4c8;
-  color: #fff;
+  color: #0f1f3d; /* dark navy on teal → 6.6:1 contrast ✓ */
 }
 .tab-inactive {
   color: #45474e;
@@ -250,15 +247,6 @@ body {
   padding: 32px 28px;
   box-shadow: 0 2px 16px rgba(15, 31, 61, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.6);
-}
-
-/* ── Scrollbar ── */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 /* ── CTA pulse ── */
